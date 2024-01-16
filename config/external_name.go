@@ -18,6 +18,7 @@ var ExternalNameConfigs = map[string]config.ExternalName{
 	"confluent_kafka_acl":            config.IdentifierFromProvider,
 	"confluent_role_binding":         config.IdentifierFromProvider,
 	"confluent_identity_provider":    config.IdentifierFromProvider,
+	"confluent_identity_pool":        config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the

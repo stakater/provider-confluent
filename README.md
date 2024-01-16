@@ -1,4 +1,4 @@
-# Provider Confluent - custom
+# Provider Confluent
 
 `provider-confluent` is a [Crossplane](https://crossplane.io/) provider that
 is built using [Upjet](https://github.com/upbound/upjet) code

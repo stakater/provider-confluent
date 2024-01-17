@@ -16,6 +16,12 @@ import (
 	identitypool "github.com/stakater/provider-confluent/internal/controller/confluent/identitypool"
 	identityprovider "github.com/stakater/provider-confluent/internal/controller/confluent/identityprovider"
 	kafkaacl "github.com/stakater/provider-confluent/internal/controller/confluent/kafkaacl"
+	linkattachmentconnection "github.com/stakater/provider-confluent/internal/controller/confluent/linkattachmentconnection"
+	network "github.com/stakater/provider-confluent/internal/controller/confluent/network"
+	networklinkendpoint "github.com/stakater/provider-confluent/internal/controller/confluent/networklinkendpoint"
+	netwrorklinkservice "github.com/stakater/provider-confluent/internal/controller/confluent/netwrorklinkservice"
+	privatelinkaccess "github.com/stakater/provider-confluent/internal/controller/confluent/privatelinkaccess"
+	privatelinkattachment "github.com/stakater/provider-confluent/internal/controller/confluent/privatelinkattachment"
 	rolebinding "github.com/stakater/provider-confluent/internal/controller/confluent/rolebinding"
 	serviceaccount "github.com/stakater/provider-confluent/internal/controller/confluent/serviceaccount"
 	providerconfig "github.com/stakater/provider-confluent/internal/controller/providerconfig"
@@ -32,6 +38,12 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		identitypool.Setup,
 		identityprovider.Setup,
 		kafkaacl.Setup,
+		linkattachmentconnection.Setup,
+		network.Setup,
+		networklinkendpoint.Setup,
+		netwrorklinkservice.Setup,
+		privatelinkaccess.Setup,
+		privatelinkattachment.Setup,
 		rolebinding.Setup,
 		serviceaccount.Setup,
 		providerconfig.Setup,

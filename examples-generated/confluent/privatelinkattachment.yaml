@@ -1,0 +1,17 @@
+apiVersion: confluent.crossplane.io/v1alpha1
+kind: PrivateLinkAttachment
+metadata:
+  annotations:
+    meta.upbound.io/example-id: confluent/v1alpha1/privatelinkattachment
+  labels:
+    testing.upbound.io/example-name: main
+  name: main
+spec:
+  forProvider:
+    cloud: AWS
+    displayName: staging-platt
+    environment:
+    - idSelector:
+        matchLabels:
+          testing.upbound.io/example-name: example
+    region: us-west-2

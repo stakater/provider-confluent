@@ -17,6 +17,12 @@ import (
 	confluentkafkaacl "github.com/stakater/provider-confluent/config/confluent_kafka_acl"
 	confluentkafkacluster "github.com/stakater/provider-confluent/config/confluent_kafka_cluster"
 	confluentkafkaclusterconfig "github.com/stakater/provider-confluent/config/confluent_kafka_cluster_config"
+	confluentnetwork "github.com/stakater/provider-confluent/config/confluent_network"
+	confluentnetworklinkendpoint "github.com/stakater/provider-confluent/config/confluent_network_link_endpoint"
+	confluentnetworklinkservice "github.com/stakater/provider-confluent/config/confluent_network_link_service"
+	confluentprivatelinkacess "github.com/stakater/provider-confluent/config/confluent_private_link_access"
+	confluentprivatelinkattachment "github.com/stakater/provider-confluent/config/confluent_private_link_attachment"
+	confluentprivatelinkattachmentconnection "github.com/stakater/provider-confluent/config/confluent_private_link_attachment_connection"
 	confluentrolebinding "github.com/stakater/provider-confluent/config/confluent_role_binding"
 	confluentserviceaccount "github.com/stakater/provider-confluent/config/confluent_service_account"
 )
@@ -53,6 +59,12 @@ func GetProvider() *ujconfig.Provider {
 		confluentrolebinding.Configure,
 		confluentidentityprovider.Configure,
 		confluentidentitypool.Configure,
+		confluentnetwork.Configure,
+		confluentnetworklinkendpoint.Configure,
+		confluentnetworklinkservice.Configure,
+		confluentprivatelinkacess.Configure,
+		confluentprivatelinkattachment.Configure,
+		confluentprivatelinkattachmentconnection.Configure,
 	} {
 		configure(pc)
 	}

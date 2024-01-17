@@ -70,6 +70,60 @@ func (l *KafkaACLList) GetItems() []resource.Managed {
 	return items
 }
 
+// GetItems of this LinkAttachmentConnectionList.
+func (l *LinkAttachmentConnectionList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this NetworkLinkEndpointList.
+func (l *NetworkLinkEndpointList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this NetworkList.
+func (l *NetworkList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this NetwrorkLinkServiceList.
+func (l *NetwrorkLinkServiceList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this PrivateLinkAccessList.
+func (l *PrivateLinkAccessList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
+// GetItems of this PrivateLinkAttachmentList.
+func (l *PrivateLinkAttachmentList) GetItems() []resource.Managed {
+	items := make([]resource.Managed, len(l.Items))
+	for i := range l.Items {
+		items[i] = &l.Items[i]
+	}
+	return items
+}
+
 // GetItems of this RoleBindingList.
 func (l *RoleBindingList) GetItems() []resource.Managed {
 	items := make([]resource.Managed, len(l.Items))

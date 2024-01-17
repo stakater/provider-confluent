@@ -10,15 +10,21 @@ import "github.com/crossplane/upjet/pkg/config"
 // provider.
 var ExternalNameConfigs = map[string]config.ExternalName{
 	// Import requires using a randomly generated ID from provider: nl-2e21sda
-	"confluent_environment":          config.IdentifierFromProvider,
-	"confluent_kafka_cluster_config": config.IdentifierFromProvider,
-	"confluent_kafka_cluster":        config.IdentifierFromProvider,
-	"confluent_service_account":      config.IdentifierFromProvider,
-	"confluent_api_key":              config.IdentifierFromProvider,
-	"confluent_kafka_acl":            config.IdentifierFromProvider,
-	"confluent_role_binding":         config.IdentifierFromProvider,
-	"confluent_identity_provider":    config.IdentifierFromProvider,
-	"confluent_identity_pool":        config.IdentifierFromProvider,
+	"confluent_environment":                        config.IdentifierFromProvider,
+	"confluent_kafka_cluster_config":               config.IdentifierFromProvider,
+	"confluent_kafka_cluster":                      config.IdentifierFromProvider,
+	"confluent_service_account":                    config.IdentifierFromProvider,
+	"confluent_api_key":                            config.IdentifierFromProvider,
+	"confluent_kafka_acl":                          config.IdentifierFromProvider,
+	"confluent_role_binding":                       config.IdentifierFromProvider,
+	"confluent_identity_provider":                  config.IdentifierFromProvider,
+	"confluent_identity_pool":                      config.IdentifierFromProvider,
+	"confluent_network":                            config.IdentifierFromProvider,
+	"confluent_network_link_endpoint":              config.IdentifierFromProvider,
+	"confluent_network_link_service":               config.IdentifierFromProvider,
+	"confluent_private_link_access":                config.IdentifierFromProvider,
+	"confluent_private_link_attachment":            config.IdentifierFromProvider,
+	"confluent_private_link_attachment_connection": config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the

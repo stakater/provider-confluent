@@ -1,0 +1,21 @@
+apiVersion: confluent.crossplane.io/v1alpha1
+kind: LinkAttachmentConnection
+metadata:
+  annotations:
+    meta.upbound.io/example-id: confluent/v1alpha1/linkattachmentconnection
+  labels:
+    testing.upbound.io/example-name: main
+  name: main
+spec:
+  forProvider:
+    aws:
+    - vpcEndpointId: vpce-0ed4d51f5d6ef9b6d
+    displayName: my_endpoint
+    environment:
+    - idSelector:
+        matchLabels:
+          testing.upbound.io/example-name: example
+    privateLinkAttachment:
+    - idSelector:
+        matchLabels:
+          testing.upbound.io/example-name: example

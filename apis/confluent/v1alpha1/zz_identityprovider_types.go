@@ -17,7 +17,7 @@ import (
 	v1 "github.com/crossplane/crossplane-runtime/apis/common/v1"
 )
 
-type IdentityProviderInitParameters struct {
+type IdentityProviderInitParameters_2 struct {
 
 	// A description for the Identity Provider.
 	// A description of the Identity Provider.
@@ -36,7 +36,7 @@ type IdentityProviderInitParameters struct {
 	JwksURI *string `json:"jwksUri,omitempty" tf:"jwks_uri,omitempty"`
 }
 
-type IdentityProviderObservation struct {
+type IdentityProviderObservation_2 struct {
 
 	// A description for the Identity Provider.
 	// A description of the Identity Provider.
@@ -58,7 +58,7 @@ type IdentityProviderObservation struct {
 	JwksURI *string `json:"jwksUri,omitempty" tf:"jwks_uri,omitempty"`
 }
 
-type IdentityProviderParameters struct {
+type IdentityProviderParameters_2 struct {
 
 	// A description for the Identity Provider.
 	// A description of the Identity Provider.
@@ -84,7 +84,7 @@ type IdentityProviderParameters struct {
 // IdentityProviderSpec defines the desired state of IdentityProvider
 type IdentityProviderSpec struct {
 	v1.ResourceSpec `json:",inline"`
-	ForProvider     IdentityProviderParameters `json:"forProvider"`
+	ForProvider     IdentityProviderParameters_2 `json:"forProvider"`
 	// THIS IS A BETA FIELD. It will be honored
 	// unless the Management Policies feature flag is disabled.
 	// InitProvider holds the same fields as ForProvider, with the exception
@@ -95,13 +95,13 @@ type IdentityProviderSpec struct {
 	// required on creation, but we do not desire to update them after creation,
 	// for example because of an external controller is managing them, like an
 	// autoscaler.
-	InitProvider IdentityProviderInitParameters `json:"initProvider,omitempty"`
+	InitProvider IdentityProviderInitParameters_2 `json:"initProvider,omitempty"`
 }
 
 // IdentityProviderStatus defines the observed state of IdentityProvider.
 type IdentityProviderStatus struct {
 	v1.ResourceStatus `json:",inline"`
-	AtProvider        IdentityProviderObservation `json:"atProvider,omitempty"`
+	AtProvider        IdentityProviderObservation_2 `json:"atProvider,omitempty"`
 }
 
 // +kubebuilder:object:root=true

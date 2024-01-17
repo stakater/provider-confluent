@@ -12,6 +12,7 @@ import (
 
 	confluentapikey "github.com/stakater/provider-confluent/config/confluent_api_key"
 	confluentenvironment "github.com/stakater/provider-confluent/config/confluent_environment"
+	confluentidentitypool "github.com/stakater/provider-confluent/config/confluent_identity_pool"
 	confluentidentityprovider "github.com/stakater/provider-confluent/config/confluent_identity_provider"
 	confluentkafkaacl "github.com/stakater/provider-confluent/config/confluent_kafka_acl"
 	confluentkafkacluster "github.com/stakater/provider-confluent/config/confluent_kafka_cluster"
@@ -51,6 +52,7 @@ func GetProvider() *ujconfig.Provider {
 		confluentkafkaacl.Configure,
 		confluentrolebinding.Configure,
 		confluentidentityprovider.Configure,
+		confluentidentitypool.Configure,
 	} {
 		configure(pc)
 	}

@@ -25,6 +25,7 @@ var ExternalNameConfigs = map[string]config.ExternalName{
 	"confluent_private_link_access":                config.IdentifierFromProvider,
 	"confluent_private_link_attachment":            config.IdentifierFromProvider,
 	"confluent_private_link_attachment_connection": config.IdentifierFromProvider,
+	"confluent_kafka_topic":                        config.IdentifierFromProvider,
 }
 
 // ExternalNameConfigurations applies all external name configs listed in the

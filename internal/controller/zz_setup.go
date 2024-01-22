@@ -16,6 +16,7 @@ import (
 	identitypool "github.com/stakater/provider-confluent/internal/controller/confluent/identitypool"
 	identityprovider "github.com/stakater/provider-confluent/internal/controller/confluent/identityprovider"
 	kafkaacl "github.com/stakater/provider-confluent/internal/controller/confluent/kafkaacl"
+	kafkatopic "github.com/stakater/provider-confluent/internal/controller/confluent/kafkatopic"
 	linkattachmentconnection "github.com/stakater/provider-confluent/internal/controller/confluent/linkattachmentconnection"
 	network "github.com/stakater/provider-confluent/internal/controller/confluent/network"
 	networklinkendpoint "github.com/stakater/provider-confluent/internal/controller/confluent/networklinkendpoint"
@@ -38,6 +39,7 @@ func Setup(mgr ctrl.Manager, o controller.Options) error {
 		identitypool.Setup,
 		identityprovider.Setup,
 		kafkaacl.Setup,
+		kafkatopic.Setup,
 		linkattachmentconnection.Setup,
 		network.Setup,
 		networklinkendpoint.Setup,

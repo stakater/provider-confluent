@@ -17,6 +17,7 @@ import (
 	confluentkafkaacl "github.com/stakater/provider-confluent/config/confluent_kafka_acl"
 	confluentkafkacluster "github.com/stakater/provider-confluent/config/confluent_kafka_cluster"
 	confluentkafkaclusterconfig "github.com/stakater/provider-confluent/config/confluent_kafka_cluster_config"
+	confluentkafkatopic "github.com/stakater/provider-confluent/config/confluent_kafka_topic"
 	confluentnetwork "github.com/stakater/provider-confluent/config/confluent_network"
 	confluentnetworklinkendpoint "github.com/stakater/provider-confluent/config/confluent_network_link_endpoint"
 	confluentnetworklinkservice "github.com/stakater/provider-confluent/config/confluent_network_link_service"
@@ -65,6 +66,7 @@ func GetProvider() *ujconfig.Provider {
 		confluentprivatelinkacess.Configure,
 		confluentprivatelinkattachment.Configure,
 		confluentprivatelinkattachmentconnection.Configure,
+		confluentkafkatopic.Configure,
 	} {
 		configure(pc)
 	}
